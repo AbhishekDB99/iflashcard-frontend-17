@@ -1,0 +1,23 @@
+<p>works!</p>
+<section style="background-color: #282c34">
+  <p class="main-text">angular-events works!</p>
+  <input
+    type="text"
+    #input1
+    placeholder="Key up"
+    (keyup)="getInput(input1.value)"
+  />
+  <span class="main-text">{{ textInput }}</span
+  ><br /><br />
+  <input
+    type="text"
+    #input2
+    placeholder="Key down"
+    (keydown)="getInput(input2.value)"
+  />
+  <span class="main-text">{{ textInput }}</span> <br /><br />
+  <input type="text" placeholder="Enter here" #inputBox />
+  <button (click)="getInputBoxValue(inputBox.value)">Submit</button>
+  <span class="main-text">Entered Value is: {{ textBoxInput }}</span>
+  <p class="main-text">angular-events works!</p>
+</section>

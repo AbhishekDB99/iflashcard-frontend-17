@@ -1,0 +1,66 @@
+.card-container-main{
+    padding-left: 10px;
+  }
+  
+  .main-card-div{
+  padding: 20px;
+  /* border-color: aliceblue; */
+  /* border-radius: 10px; */
+  /* border-width: 10px; */
+  background-color: black;
+  color: aliceblue;
+  display: inline-block;
+  width: 45%;
+  margin: 5px;
+  }
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 60px;  /* Adding padding around elements within the section */
+  }
+  
+  .card-container {
+    perspective: 800px;
+    position: relative;
+    padding: 10px;
+  }
+  
+  .card-front{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s;
+    background-color: orange
+  }
+  
+  .card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s;
+    background-color: red
+  }
+  
+  .card-back { /* Initially hide the back side */
+    transform: rotateY(180deg);
+  }
+  
+  .card-container.flipped .card-front {
+    transform: rotateY(180deg);
+  }
+  
+  .card-container.flipped .card-back {
+    transform: rotateY(0deg);
+  }
+  
