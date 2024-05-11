@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../services/common.service';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [SharedModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
@@ -25,7 +26,7 @@ export class CardComponent {
   }
 
   getAllFlashCards() {
-    this.commonService.getAllFlashCards().subscribe((res: any) => {
+    this.commonService.getAllFlashCards().subscribe((res: any) => {      
       this.flashCards = res.data.cards.map((card: any) => ({
         ...card,
         isFlipped: false,
